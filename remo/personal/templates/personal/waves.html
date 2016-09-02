@@ -1,0 +1,30 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+
+<style  >
+p {
+	style="font-size:100%;"
+}
+</style>
+
+<div id="my-chart1">
+<script type="text/javascript">
+  new Highcharts.Chart({{hs|safe}});
+</script>
+</div>
+
+<div id="my-chart2">
+<script type="text/javascript">
+  new Highcharts.Chart({{tp|safe}});
+</script>
+</div>
+
+<div id="my-chart3">
+<script type="text/javascript">
+  new Highcharts.Chart({{dp|safe}});
+</script>
+</div>
+
+
+{% endblock %}
