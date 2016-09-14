@@ -20,8 +20,13 @@ def waves(request):
 	'/Dropbox/projects/BMOP/Sistemas-BMOP/Processamento/dados/BMOBR06_CF2/op/'
 	
 	dd = pd.read_csv(pathname + 'Dados_BMOBR06.csv', index_col='date', parse_dates=True)
-	
+
 	# dd = dd.ix[-14*24:,:] # dd = dd['2016-06-24':]
+
+	dd['Hs'] = dd.hs
+	dd['Tp'] = dd.tp
+	dd['Dp'] = dd.dp
+	
 	
 	args = {
 			'kind': 'line',
@@ -30,20 +35,23 @@ def waves(request):
 			'output_type': 'json'
 			}
 
-	param = {'hs': 'my-chart1',
-			 'tp': 'my-chart2',
-			 'dp': 'my-chart3'}
+	param = {'Hs': ['my-chart1', 'Altura Significativa - Hs'],
+			 'Tp': ['my-chart2', 'Período de Pico - Tp'],
+			 'Dp': ['my-chart3', 'Direção de Pico - Dp']
+			 }
 
 	chart = {}
 
 	for p in param:
 
-		chart[p] = serialize(dd[[p]], render_to=param[p],
-								      title='Altura Significativa - Hs',
+		chart[p] = serialize(dd[[p]], render_to=param[p][0],
+								      title=param[p][1],
 								      kind=args['kind'],
 								      zoom=args['zoom'],
 								      grid=args['grid'],
-								      output_type=args['output_type'])
+								      output_type=args['output_type'],
+								      yAxis='aa'
+								      )
 
 	# return render(request, 'personal/waves.html')
 	# return render_to_response('personal/waves.html', {'chart': chart})
