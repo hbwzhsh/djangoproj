@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.shortcuts import render, render_to_response
 import pandas as pd
 import os
@@ -15,9 +16,9 @@ def data(request):
 	return render(request, 'personal/data.html')
 
 def waves(request):
-	
+	# '/Dropbox/projects/BMOP/Sistemas-BMOP/Processamento/dados/BMOBR06_CF2/op/'
 	pathname = os.environ['HOME'] + \
-	'/Dropbox/projects/BMOP/Sistemas-BMOP/Processamento/dados/BMOBR06_CF2/op/'
+	'/Downloads/'
 	
 	dd = pd.read_csv(pathname + 'Dados_BMOBR06.csv', index_col='date', parse_dates=True)
 
@@ -50,8 +51,9 @@ def waves(request):
 								      zoom=args['zoom'],
 								      grid=args['grid'],
 								      output_type=args['output_type'],
-								      yAxis='aa'
+								      yAxis_title=p
 								      )
+		print p
 
 	# return render(request, 'personal/waves.html')
 	# return render_to_response('personal/waves.html', {'chart': chart})
