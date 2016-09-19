@@ -1,0 +1,247 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+
+<div id="wind-spd" style="min-width: 310px; height: 400px; margin: 0 auto">
+
+<script type="text/javascript">
+$(function () {
+    $('#wind-spd').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'Intensidade do Vento'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            type: 'datetime',
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'm/s'
+            },
+            minorGridLineWidth: 0,
+            gridLineWidth: 0,
+            alternateGridColor: null,
+            plotBands: [{ // Light air
+                from: 0.3,
+                to: 1.5,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: 'Light air',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Light breeze
+                from: 1.5,
+                to: 3.3,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: 'Light breeze',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Gentle breeze
+                from: 3.3,
+                to: 5.5,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: 'Gentle breeze',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Moderate breeze
+                from: 5.5,
+                to: 8,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: 'Moderate breeze',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Fresh breeze
+                from: 8,
+                to: 11,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: 'Fresh breeze',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Strong breeze
+                from: 11,
+                to: 14,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: 'Strong breeze',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // High wind
+                from: 14,
+                to: 15,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: 'High wind',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }]
+        },
+        tooltip: {
+            valueSuffix: ' m/s'
+        },
+        plotOptions: {
+            spline: {
+                lineWidth: 4,
+                states: {
+                    hover: {
+                        lineWidth: 5
+                    }
+                },
+                marker: {
+                    enabled: false
+                },
+                pointInterval: 3600000, // one hour
+                pointStart: Date.UTC(2015, 4, 31, 0, 0, 0)
+            }
+        },
+        series: [{
+            name: 'BMOBR-06',
+            data: [0.2, 0.8, 0.8, 0.8, 1, 1.3, 1.5, 2.9, 1.9, 2.6, 1.6, 3, 4, 3.6, 4.5, 4.2]
+
+        }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });
+});
+
+</script>
+
+</div>
+
+
+
+<div id="wind-dir" style="min-width: 310px; height: 400px; margin: 0 auto">
+
+<script type="text/javascript">
+$(function () {
+    $('#wind-dir').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'Direção do Vento'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            type: 'datetime',
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'm/s'
+            },
+            minorGridLineWidth: 0,
+            gridLineWidth: 0,
+            alternateGridColor: null,
+            plotBands: [{ // Light air
+                from: 0,
+                to: 90,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: 'N/E',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Light breeze
+                from: 91,
+                to: 180,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: 'E/S',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Gentle breeze
+                from: 181,
+                to: 270,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: 'S/W',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Moderate breeze
+                from: 271,
+                to: 360,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: 'W/N',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }]
+        },
+        tooltip: {
+            valueSuffix: ' Graus'
+        },
+        plotOptions: {
+            spline: {
+                lineWidth: 4,
+                states: {
+                    hover: {
+                        lineWidth: 5
+                    }
+                },
+                marker: {
+                    enabled: false
+                },
+                pointInterval: 3600000, // one hour
+                pointStart: Date.UTC(2015, 4, 31, 0, 0, 0)
+            }
+        },
+        series: [{
+            name: 'BMOBR-06',
+            data: [0, 30, 190, 310, 230, 100, 90, 280, 315]
+
+        }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });
+});
+
+</script>
+
+</div>
+
+
+
+{% endblock %}

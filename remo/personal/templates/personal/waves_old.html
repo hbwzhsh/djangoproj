@@ -1,0 +1,65 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+
+<style>
+p {
+	style="font-size:100%;"
+}
+</style>
+
+<!-- Hs -->
+<div id="my-chart1">
+<script type="text/javascript">
+  new Highcharts.Chart({{Hs|safe}});
+</script>
+</div>
+
+<!-- Tp -->
+<div id="my-chart2">
+<script type="text/javascript">
+  new Highcharts.Chart({{Tp|safe}});
+</script>
+</div>
+
+<!-- Dp -->
+<div id="my-chart3">
+<script type="text/javascript">
+  new Highcharts.Chart({{Dp|safe}});
+</script>
+</div>
+
+<div id="container" style="height: 400px; min-width: 310px"></div>
+
+<script type="text/javascript">
+	
+$(function () {
+
+    $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
+        // Create the chart
+        $('#container').highcharts('StockChart', {
+
+
+            rangeSelector: {
+                selected: 1
+            },
+
+            title: {
+                text: 'AAPL Stock Price'
+            },
+
+            series: [{
+                name: 'AAPL',
+                data: data,
+                tooltip: {
+                    valueDecimals: 2
+                }
+            }]
+        });
+    });
+
+});
+</script>
+
+
+{% endblock %}

@@ -5,7 +5,71 @@
 <div style="text-align: center;">
 	<h2>BMOBR-06</h2>
     <br><br>
-    <div class="col-sm-10" id="mapa"></div>
+    
+
+	<div id="container">
+
+    <script type="text/javascript">
+    	
+$(function () {
+
+    // Initiate the chart
+    $('#container').highcharts('Map', {
+
+        title: {
+            text: 'Localização das Boias da REMO'
+        },
+
+        mapNavigation: {
+            enabled: true
+        },
+
+        tooltip: {
+            headerFormat: '',
+            pointFormat: '<b>{point.name}</b><br>Lat: {point.lat}, Lon: {point.lon}'
+        },
+
+        series: [{
+            // Use the gb-all map with no data as a basemap
+            mapData: Highcharts.maps['countries/br/br-all'],
+            name: 'Basemap',
+            borderColor: '#A0A0A0',
+            nullColor: 'rgba(200, 200, 200, 0.3)',
+            showInLegend: false
+        }, {
+            name: 'Separators',
+            type: 'mapline',
+            data: Highcharts.geojson(Highcharts.maps['countries/br/br-all'], 'mapline'),
+            color: '#707070',
+            showInLegend: false,
+            enableMouseTracking: false
+        }, {
+            // Specify points using lat/lon
+            type: 'mappoint',
+            name: 'Boias Meteo-Oceanográficas',
+            color: Highcharts.getOptions().colors[1],
+            data: [{
+                name: 'BMOBR-05',
+                lat: -23,
+                lon: -41
+            }, {
+                name: 'BMOBR-06',
+                lat: -23,
+                lon: -42,
+                dataLabels: {
+                    align: 'left',
+                    x: 5,
+                    verticalAlign: 'middle'
+                }
+            }]
+        }]
+    });
+});
+
+    </script>
+
+    </div>
+
     <img style="width: 80%" src="http://okesat.com.br/cf2/fig/loc.png">
     <img style="width: 80%" src="http://okesat.com.br/cf2/fig/LIOc_CF02.png">
     <img style="width: 80%" src="http://okesat.com.br/cf2/fig/WaveField_Hs.png">

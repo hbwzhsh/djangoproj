@@ -2,16 +2,31 @@
 
 {% block content %}
 
+<style  >
+p {
+	style="font-size:100%;"
+}
+</style>
+
 <div id="my-chart1">
 <script type="text/javascript">
   var charts = new Highcharts.Chart({{Hs|safe}});
+  charts.options.yAxis[0].isY = true;
+  var title = new Object();
+  title.text = "Hs"
+  charts.yAxis[0].options.title = title
   charts.yAxis[0].axisTitle["element"].innerHTML = "Metros";
+  console.log(charts.yAxis[0].axisTitle["element"].innerHTML);
 </script>
 </div>
 
 <div id="my-chart2">
 <script type="text/javascript">
   var charts2 = new Highcharts.Chart({{Tp|safe}});
+  charts2.options.yAxis[0].isY = true;
+  var title = new Object();
+  title.text = "Tp"
+  charts2.yAxis[0].options.title = title
   charts2.yAxis[0].axisTitle["element"].innerHTML = "Segundos";
 </script>
 </div>
@@ -19,8 +34,13 @@
 <div id="my-chart3">
 <script type="text/javascript">
   var charts3 = new Highcharts.Chart({{Dp|safe}});
+  charts3.options.yAxis[0].isY = true;
+  var title = new Object();
+  title.text = "Dp"
+  charts3.yAxis[0].options.title = title
   charts3.yAxis[0].axisTitle["element"].innerHTML = "Graus";
 </script>
 </div>
+
 
 {% endblock %}

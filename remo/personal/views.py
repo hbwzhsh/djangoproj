@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from django.shortcuts import render, render_to_response
 import pandas as pd
 import os
@@ -16,9 +15,9 @@ def data(request):
 	return render(request, 'personal/data.html')
 
 def waves(request):
-	# '/Dropbox/projects/BMOP/Sistemas-BMOP/Processamento/dados/BMOBR06_CF2/op/'
+	
 	pathname = os.environ['HOME'] + \
-	'/Downloads/'
+	'/Dropbox/projects/BMOP/Processamento/dados/BMOBR06_CF2/op/'
 	
 	dd = pd.read_csv(pathname + 'Dados_BMOBR06.csv', index_col='date', parse_dates=True)
 
@@ -51,13 +50,28 @@ def waves(request):
 								      zoom=args['zoom'],
 								      grid=args['grid'],
 								      output_type=args['output_type'],
-								      yAxis_title=p
+								      y_axis_title='teste'
 								      )
-		print p
+	return render(request, 'personal/waves.html', chart)
 
-	# return render(request, 'personal/waves.html')
-	# return render_to_response('personal/waves.html', {'chart': chart})
-	return render_to_response('personal/waves.html', chart)
+def currents(request):
+	return render(request, 'personal/currents.html')
+
+def wind(request):
+	return render(request, 'personal/wind.html')
+
+def atmpres(request):
+	return render(request, 'personal/atmpres.html')
+
+def airtemp(request):
+	return render(request, 'personal/airtemp.html')
+
+def watertemp(request):
+	return render(request, 'personal/watertemp.html')
+
+def relumid(request):
+	return render(request, 'personal/relumid.html')
 
 def contact(request):
 	return render(request, 'personal/contact.html')
+

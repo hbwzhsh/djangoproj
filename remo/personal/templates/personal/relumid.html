@@ -1,0 +1,44 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+
+<div id="container" style="height: 400px; min-width: 100%">
+
+
+<script type="text/javascript">
+    
+
+$(function () {
+
+    $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
+        // Create the chart
+        $('#container').highcharts('StockChart', {
+
+
+            rangeSelector: {
+                selected: 1
+            },
+
+            title: {
+                text: 'Umidade Relativa'
+            },
+
+            series: [{
+                name: 'Umid. Rel',
+                data: data,
+                tooltip: {
+                    valueDecimals: 2
+                }
+            }]
+        });
+    });
+
+});
+
+</script>
+
+</div>
+
+
+
+{% endblock %}
