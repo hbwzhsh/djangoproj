@@ -1,0 +1,361 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'oceanobs/css/style.css' %}" />
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>REMO - Rede de Modelagem e Observação Oceanográfica.</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<link rel="shortcut icon" href="http://www.rederemo.org/html//favicon.ico" type="image/x-icon" />
+
+
+<!-- CSS
+================================================== -->
+
+<link rel="stylesheet" type="text/css" href="{% static 'oceanobs/css/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'oceanobs/css/boxed.css' %}" id="layout" />
+<link rel="stylesheet" type="text/css" href="{% static 'oceanobs/css/green.css' %}" id="colors" />
+
+<link rel="stylesheet" type="text/css" href="{% static 'oceanobs/css/rederemo.css' %}" />
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'oceanobs/css/smoothness/jquery-ui-1.10.2.custom.css' %}" />
+
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'oceanobs/css/elfinder.min.css' %}" />
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'oceanobs/css/theme.css' %}" />
+
+<!-- Java Script
+================================================== -->
+
+<script src="{% static 'oceanobs/js/jquery.min.js' %}"></script>
+<script src="{% static 'oceanobs/js/jquery-ui.min.js' %}"></script>
+
+<script src="{% static 'oceanobs/js/custom.js' %}"></script>
+<script src="{% static 'oceanobs/js/selectnav.js' %}"></script>
+<script src="{% static 'oceanobs/js/flexslider.js' %}"></script>
+<script src="{% static 'oceanobs/js/tooltip.js' %}"></script>
+<script src="{% static 'oceanobs/js/fancybox.js' %}"></script>
+<script src="{% static 'oceanobs/js/carousel.js' %}"></script>
+<script src="{% static 'oceanobs/js/isotope.js' %}"></script>
+
+<script src="{% static 'oceanobs/js/elfinder.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'oceanobs/js/i18n/elfinder.pt_BR.js' %}"></script>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18697687-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+
+  </script>
+
+<script>
+
+	 $(document).ready(function() {
+
+		 	$.ajaxSetup({ cache: false });
+			
+			$("tr").mouseover(function(){
+			    $(this).addClass("over")
+			});
+			
+			$("tr").mouseout(function(){
+			    $(this).removeClass("over")
+			});
+	 });
+</script>			
+
+
+</head>
+<body>
+
+
+
+<!-- Wrapper Start -->
+<div id="wrapper">
+
+
+<!-- Header
+================================================== -->
+
+<!-- 960 Container -->
+<div class="container ie-dropdown-fix">
+
+	<!-- Header -->
+	<div id="header">
+
+		<!-- Logo -->
+		<div class="eight columns">
+			<div id="logo">
+				<div class="clear"></div>
+			</div>
+		</div>
+
+	</div>
+	<!-- Header / End -->
+	
+
+	<!-- Navigation -->
+	<div class="sixteen columns">
+
+		<div id="navigation">
+			<ul id="nav">
+				<li id="menu-home"><a href="{% static 'oceanobs/index.php/welcome/lang/english.html' %}">Home</a></li>
+				<li id="menu-equipe" class="selected"><a href="{% static 'oceanobs/index.php/integrante.html' %}">Equipe</a></li>
+				<li id="menu-publicacoes"><a href="{% static 'oceanobs/index.php/producao.html' %}">Publicações</a></li>
+				<li id="menu-noticias"><a href="{% static 'oceanobs/index.php/noticias.html' %}">Notícias</a></li>
+				<li id="menu-documentos"><a href="{% static 'oceanobs/index.php/arquivo.html' %}">Documentos</a></li>
+				<li id="menu-produtos">
+					<a href="index.html#">Produtos</a>
+					<ul style="display: none;">
+						<li><a href="{% static 'oceanobs/index.php/produto/observacional.html' %}">Dados Observacionais</a></li>
+						<li><a href="{% static 'oceanobs/index.php/produto/operacional.html' %}">Previsão Numérica Oceânica Operacional</a></li>
+						<li><a href="{% static 'oceanobs/index.php/produto/tsm.html' %}">Temperatura da Superfície do Mar</a></li>
+						<li><a href="http://146.164.14.45:8080/las">LAS</a></li>
+					</ul>
+				</li>
+				<li id="menu-contato"><a href="{% static 'oceanobs/index.php/welcome/contato.html' %}">Contatos</a></li>
+				
+			</ul>
+			
+
+		</div>
+		
+		<!-- Search Form -->
+		<div class="search-form">
+			<a href="{% static 'oceanobs/index.php/welcome/lang/portuguese.html' %}"><img alt="" src="{% static 'oceanobs/images/bra.gif' %}" /></a>
+			<a href="{% static 'oceanobs/index.php/welcome/lang/english.html' %}"><img alt="" src="{% static 'oceanobs/images/usa.gif' %}" /></a>
+			
+			<!-- 
+			<form method="get" action="#">
+				<input class="search-text-box" type="text">
+			</form>
+			 -->
+		</div> 
+		
+		<div class="clear"></div>
+		
+	</div>
+	<!-- Navigation / End -->
+
+</div>
+<!-- 960 Container / End -->
+
+
+<!-- Content
+================================================== -->
+
+<!-- 960 Container -->
+<div class="container">
+	<div class="sixteen columns">
+		
+		
+<section class="slider">
+<div class="flexslider home">
+	
+	<div style="overflow: hidden; position: relative;" class="flex-viewport">
+		<ul style="width: 1000%; transition-duration: 0s; transform: translate3d(-1880px, 0px, 0px);" class="slides">
+		
+										
+				
+							
+				<li class="" style="width: 940px; float: left; display:display">					
+				<div class="noticia-imagem-home" style="height: 400px;  overflow-y: hidden;"> 
+					<a href="{% static 'oceanobs/index.php/noticias/visualizar/33.html' %}"><img height="400px" src="{% static 'oceanobs/uploads/ckfinder/images/Antares(1).jpg' %}" alt=""></a>
+				</div>
+				<div class="slide-caption">
+					
+					<h3><a href="{% static 'oceanobs/index.php/noticias/visualizar/33.html' %}">Bóias Meteo-oceanográficas da REMO são lançadas pelo NOc Antares da Marinha do Brasil ao Largo da Costa Sudeste do Brasil</a></h3>
+					<p><a href="{% static 'oceanobs/index.php/noticias/visualizar/33.html' %}">O NOc Antares da Marinha do Brasil lan&ccedil;ou duas b&oacute;ias da REMO em mar&ccedil;o de 2015. As b&oacute;ias est&atilde;o coletando e transmitindo dados atmosf&eacute;ricos e oce&acirc;nicos. E ...</a></p>
+				</div> 
+				</li>
+				
+							
+				
+							
+				<li class="flex-active-slide" style="width: 940px; float: left; display:none">					
+				<div class="noticia-imagem-home" style="height: 400px;  overflow-y: hidden;"> 
+					<a href="{% static 'oceanobs/index.php/noticias/visualizar/32.html' %}"><img height="400px" src="{% static 'oceanobs/uploads/ckfinder/images/groupphotolarge(2).gif' %}" alt=""></a>
+				</div>
+				<div class="slide-caption">
+					
+					<h3><a href="{% static 'oceanobs/index.php/noticias/visualizar/32.html' %}">REMO participa do V GODAE OceanView Science Team Meeting</a></h3>
+					<p><a href="{% static 'oceanobs/index.php/noticias/visualizar/32.html' %}">A REMO participou do V GODAE OceanView Science Team Meeting, de 13 a 17 de outubro de 2014 em Pequim. Ela foi representada pelo&nbsp;Prof. Clemente A. S. Tanajura (UFBA).&nbsp;O anfitri&atilde;o do en ...</a></p>
+				</div> 
+				</li>
+				
+							
+				
+							
+				<li class="" style="width: 940px; float: left; display:none">					
+				<div class="noticia-imagem-home" style="height: 400px;  overflow-y: hidden;"> 
+					<a href="{% static 'oceanobs/index.php/noticias/visualizar/31.html' %}"><img height="400px" src="{% static 'oceanobs/images/noticia_sem_imagem.jpg' %}" alt=""></a>
+				</div>
+				<div class="slide-caption">
+					
+					<h3><a href="{% static 'oceanobs/index.php/noticias/visualizar/31.html' %}">Inserção dos campos de TSM da REMO no PODAAC</a></h3>
+					<p><a href="{% static 'oceanobs/index.php/noticias/visualizar/31.html' %}">Os campos de TSM da REMO foram aprovados e chancelados pelo GHRSST apÃ³s um intenso processo de validaÃ§Ã£o. Importante ressaltar que a REMO Ã© o Ãºnico representante da AmÃ©rica do Sul no GHRSST (Glo ...</a></p>
+				</div> 
+				</li>
+				
+							
+				
+							
+				<li class="" style="width: 940px; float: left; display:none">					
+				<div class="noticia-imagem-home" style="height: 400px;  overflow-y: hidden;"> 
+					<a href="{% static 'oceanobs/index.php/noticias/visualizar/30.html' %}"><img height="400px" src="{% static 'oceanobs/uploads/ckfinder/images/DSC_0395.JPG' %}" alt=""></a>
+				</div>
+				<div class="slide-caption">
+					
+					<h3><a href="{% static 'oceanobs/index.php/noticias/visualizar/30.html' %}">Prof. Jiang Zhu visita a UFBA em setembro de 2014</a></h3>
+					<p><a href="{% static 'oceanobs/index.php/noticias/visualizar/30.html' %}">
+ ...</a></p>
+				</div> 
+				</li>
+				
+						
+
+			</ul>
+	</div>
+	<ul class="flex-direction-nav">
+		<li><a class="flex-prev" href="index.html#">Previous</a></li>
+		<li><a class="flex-next" href="index.html#">Next</a></li>
+	</ul>
+</div>
+</section> 
+ 
+ <div class="container">
+	<br><br>
+	<div class="sixteen columns">
+		<!-- Headline -->
+		<div class="headline no-margin"><h3>REMO</h3></div>
+	</div>	
+			
+	<div style="text-align: justify; margin-left: 10px; margin-right: 10px;">
+	
+	<p>A REMO &eacute; um esfor&ccedil;o brasileiro em oceanografia f&iacute;sica e oceanografia  operacional realizado por um grupo de pesquisadores, t&eacute;cnicos e  estudantes associados a universidades, centros de pesquisa e &agrave; Marinha  do Brasil, financiados pela Petrobras e pela Ag&ecirc;ncia Nacional do  Petr&oacute;leo, G&aacute;s Natural e Biocombust&iacute;veis (ANP). Participam hoje da REMO a  Universidade Federal do Rio Grande (FURG), a Universidade Federal do  Rio de Janeiro (UFRJ), a Universidade Federal da Bahia (UFBA), a  Universidade de S&atilde;o Paulo (USP), o Centro de Hidrografia da Marinha  (CHM), o Instituto de Estudos do Mar Almirante Paulo Moreira (IEAPM) e o  Centro de Pesquisas e Desenvolvimento Leopoldo Miguez de Mello da  Petrobras (CENPES).</p>
+
+	<p>O objetivo geral da REMO &eacute; o desenvolvimento de ci&ecirc;ncia e tecnologia  em oceanografia f&iacute;sica, modelagem oce&acirc;nica, oceanografia observacional e  oceanografia operacional com assimila&ccedil;&atilde;o de dados.&nbsp; Busca-se  especificamente: (i) a melhoria do entendimento da circula&ccedil;&atilde;o e  variabilidade de meso- e larga-escala do Oceano Atl&acirc;ntico Sul e tropical  nas escalas intrasazonal a interanual; (ii) a produ&ccedil;&atilde;o de previs&otilde;es  oce&acirc;nicas de curto-prazo e a melhoria da previsibilidade; (iii) o  desenvolvimento de m&eacute;todos de assimila&ccedil;&atilde;o de dados; e (iv) a produ&ccedil;&atilde;o de  informa&ccedil;&otilde;es oceanogr&aacute;ficas de alta qualidade para suporte a atividades  da ind&uacute;stria do petr&oacute;leo, da Marinha do Brasil e&nbsp; de outros setores que  demandem informa&ccedil;&otilde;es oceanogr&aacute;ficas.</p>
+
+	<p>No portal da REMO pode ser acessado um conjunto de previs&otilde;es  oce&acirc;nicas de curto prazo &ndash; de at&eacute; 7 dias &ndash; para o Oceano Atl&acirc;ntico&nbsp;  produzido diariamente pelos modelos oce&acirc;nicos <a href="http://www.hycom.org">HYCOM</a> e <a href="http://www.myroms.org">ROMS</a> e campos de  temperatura da superf&iacute;cie do mar produzidos com dados de sensoriamento  remoto. Diversos outros produtos encontram-se em desenvolvimento e ser&atilde;o  paulatinamente disponibilizados, entre eles, simula&ccedil;&otilde;es de longo-prazo,  an&aacute;lises objetivas produzidas por m&eacute;todos de assimila&ccedil;&atilde;o de dados e  dados de altimetria.</p>	
+	</div>
+	<br>
+	<div class="sixteen columns">
+		<!-- Headline -->
+		<div class="headline no-margin"><h3>Destaques</h3></div>
+	</div>
+	
+	<!-- Project -->
+	<div class="four columns">
+		<div class="picture"><a href="{% static 'oceanobs/index.php/produto/operacional.html' %}"><img src="{% static 'oceanobs/images/portoflio-09.jpg' %}" alt=""><div style="opacity: 0; display: block;" class="image-overlay-link"></div></a></div>
+		<div class="item-description">
+			<h5><a href="http://www.rederemo.org/html/produto/operacional">Previsão Numérica Operacional</a></h5>
+			<p>Previsões dos modelos HYCOM (1/4 e 1/12) e ROMS (alta resolução para a plataforma/talude continental)</p>
+		</div>
+	</div>
+	
+	<!-- Project -->
+	<div class="four columns">
+		<div class="picture"><a href="{% static 'oceanobs/index.php/produto/tsm.html' %}"><img src="{% static 'oceanobs/images/portoflio-08.jpg' %}" alt=""><div style="opacity: 0; display: block;" class="image-overlay-link"></div></a></div>
+		<div class="item-description">
+			<h5><a href="http://www.rederemo.org/html/produto/tsm">TSM</a></h5>
+			<p>Composites de 24 h da Temperatura da Superfície do Mar com resolução de 5 km</p>
+		</div>
+	</div>
+	
+	<!-- Project -->
+	<div class="four columns">
+		<div class="picture"><a href="http://146.164.14.45:8080/las"><img src="{% static 'oceanobs/images/portoflio-10.jpg' %}" alt=""><div style="opacity: 0; display: block;" class="image-overlay-link"></div></a></div>
+		<div class="item-description">
+			<h5><a href="http://146.164.14.45:8080/las">LAS</a></h5>
+			<p>Analises da TSM e bases hidrodinâmicas</p>
+		</div>
+	</div>	
+	
+</div>
+<!-- 960 Container / End -->
+
+
+<br>
+<!-- 960 Container -->
+
+<div class="container">
+	<div class="sixteen columns">
+	
+		<!-- Headline -->
+		<div class="headline no-margin"><h3>Parceiros</h3></div>
+		
+		<ul class="client-list">
+			<li><a href="http://www.ufba.br/" target="_blank"><img src="{% static 'oceanobs/images/inst_03.gif' %}" alt=""></a></li>
+			<li><a href="http://www.ufrj.br/" target="_blank"><img src="{% static 'oceanobs/images/inst_01.gif' %}" alt=""></a></li>
+			<li><a href="http://www.petrobras.com.br/" target="_blank"><img src="{% static 'oceanobs/images/inst_05.gif' %}" alt=""></a></li>
+			<li><a href="http://www.anp.gov.br/" target="_blank"><img src="{% static 'oceanobs/images/inst_06.gif' %}" alt=""></a></li>
+			<li><a href="http://www.mar.mil.br/" target="_blank"><img src="{% static 'oceanobs/images/inst_07.gif' %}" alt=""></a></li>
+			<li><a href="http://www.godae-oceanview.org/" target="_blank"><img src="{% static 'oceanobs/images/godae.png' %}" alt=""></a></li>
+			<li><a href="http://www.cnpq.br" target="_blank"><img style="padding-top: 10px;" src="{% static 'oceanobs/images/cnpq.gif' %}" alt=""></a></li>
+		</ul>
+		
+	</div>
+</div>
+ 
+
+<script>
+$(document).ready(function() {
+	$('#nav li').removeClass('selected');
+	$('#nav #menu-home').addClass('selected');
+
+	$('img.noticia-imagem-home').css('display', 'block');
+});
+
+</script>
+		
+		
+		<!-- Page Title / End -->
+	</div>
+</div>
+
+
+<!-- 960 Container -->
+<!-- 960 Container / End -->
+
+</div>
+<!-- Wrapper / End -->
+
+
+<!-- Footer
+================================================== -->
+
+<!-- Footer Start -->
+<div id="footer">
+	<!-- 960 Container -->
+	<div class="container">
+	
+		<!-- Footer / Bottom -->
+		<div class="sixteen columns">
+			<div id="footer-bottom">
+				&copy; 2013 Rede Remo | <a href="{% static 'oceanobs/index.php/arquivo.html' %}">Acesso ao sistema</a>								<div id="scroll-top-top"><img src="{% static 'oceanobs/images/cc.png' %}" /></div>
+			</div>
+		</div>
+
+	</div>
+	<!-- 960 Container / End -->
+
+</div>
+<!-- Footer / End -->
+
+</body>
+</html>

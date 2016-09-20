@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>REMO - Rede de Modelagem e Observação Oceanográfica.</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<link rel="shortcut icon" href="http://www.rederemo.org/html//favicon.ico" type="image/x-icon" />
+
+
+<!-- CSS
+================================================== -->
+
+<link rel="stylesheet" type="text/css" href="../../../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../../../css/boxed.css" id="layout" />
+<link rel="stylesheet" type="text/css" href="../../../css/green.css" id="colors" />
+
+<link rel="stylesheet" type="text/css" href="../../../css/rederemo.css" />
+
+
+<link rel="stylesheet" type="text/css" href="../../../css/smoothness/jquery-ui-1.10.2.custom.css" />
+
+<link rel="stylesheet" type="text/css" media="screen" href="../../../css/elfinder.min.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../../css/theme.css" />
+
+<!-- Java Script
+================================================== -->
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/jquery-ui.min.js"></script>
+
+<script src="../../../js/custom.js"></script>
+<script src="../../../js/selectnav.js"></script>
+<script src="../../../js/flexslider.js"></script>
+<script src="../../../js/tooltip.js"></script>
+<script src="../../../js/fancybox.js"></script>
+<script src="../../../js/carousel.js"></script>
+<script src="../../../js/isotope.js"></script>
+
+<script src="../../../js/elfinder.min.js"></script>
+<script type="text/javascript" src="../../../js/i18n/elfinder.pt_BR.js"></script>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18697687-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+
+  </script>
+
+<script>
+
+	 $(document).ready(function() {
+
+		 	$.ajaxSetup({ cache: false });
+			
+			$("tr").mouseover(function(){
+			    $(this).addClass("over")
+			});
+			
+			$("tr").mouseout(function(){
+			    $(this).removeClass("over")
+			});
+	 });
+</script>			
+
+
+</head>
+<body>
+
+
+
+<!-- Wrapper Start -->
+<div id="wrapper">
+
+
+<!-- Header
+================================================== -->
+
+<!-- 960 Container -->
+<div class="container ie-dropdown-fix">
+
+	<!-- Header -->
+	<div id="header_en">
+
+		<!-- Logo -->
+		<div class="eight columns">
+			<div id="logo">
+				<div class="clear"></div>
+			</div>
+		</div>
+
+	</div>
+	<!-- Header / End -->
+	
+			
+	<!-- Navigation -->
+	<div class="sixteen columns">
+
+		<div id="navigation">
+			<ul id="nav">
+				<li id="menu-home"><a href="../../welcome/lang/english.html">Home</a></li>
+				<li id="menu-equipe" class="selected"><a href="../../integrante.html">Team</a></li>
+				<li id="menu-publicacoes"><a href="../../producao.html">Publications</a></li>
+				<li id="menu-noticias"><a href="../../noticias.html">News</a></li>
+				<li id="menu-documentos"><a href="../../arquivo.html">Documents</a></li>
+				<li id="menu-produtos">
+					<a href="10.html#">Products</a>
+					<ul style="display: none;">
+						<li><a href="../operacional.html">Operational Forecast Number Ocean</a></li>
+						<li><a href="../tsm.html">Sea Surface Temperature</a></li>
+						<li><a href="http://146.164.14.45:8080/las">LAS</a></li>
+					</ul>
+				</li>
+				<li id="menu-contato"><a href="../../welcome/contato.html">Contacts</a></li>
+				
+			</ul>
+			
+
+		</div>
+		
+		<!-- Search Form -->
+		<div class="search-form">
+			<a href="../../welcome/lang/portuguese.html"><img alt="" src="../../../images/bra.gif" /></a>
+			<a href="../../welcome/lang/english.html"><img alt="" src="../../../images/usa.gif" /></a>
+			
+			<!-- 
+			<form method="get" action="#">
+				<input class="search-text-box" type="text">
+			</form>
+			 -->
+		</div> 
+		
+		<div class="clear"></div>
+		
+	</div>
+	<!-- Navigation / End -->
+
+</div>
+<!-- 960 Container / End -->
+
+
+<!-- Content
+================================================== -->
+
+<!-- 960 Container -->
+<div class="container">
+	<div class="sixteen columns">
+		
+		<div id="page-title">
+	<h2>Products <span>/ Estimativa do Erro da Temperatura da Superfície do Mar</span></h2>
+	<div id="bolded-line"></div>
+</div>
+
+
+<script>
+
+var image_name = "http://www.rederemo.org/html//produtos/hycom/LMA/errotsm/10_dias/d_";  //the base "path/name" of the image set without the numbers
+
+var image_type = "jpg";                 //"gif" or "jpg" or whatever your browser can display
+
+var first_image = 0;                    //first image number
+var last_image = 9;                 //last image number
+
+
+var theImages = new Array();
+var normal_delay = 300;
+var delay = normal_delay;  //delay between frames in 1/100 seconds
+var delay_step = 10;
+var delay_max = 4000;
+var delay_min = 10;
+var current_image = first_image;     //number of the current image
+var timeID = null;
+var status = 1;            // 0-stopped, 1-playing
+var play_mode = 1;         // 0-normal, 1-loop, 2-swing
+var size_valid = 0;
+
+//===> makes sure the first image number is not bigger than the last image number
+if (first_image > last_image)
+{
+   var help = last_image;
+   last_image = first_image;
+   first_image = help;
+};
+
+//===> preload the images - gets executed first, while downloading the page
+for (var i = first_image; i <= last_image; i++)
+{
+   theImages[i] = new Image();
+   theImages[i].src = image_name + i + "." + image_type;
+};
+
+
+//===> stop the movie
+function stop()
+{
+    if (status == 1) clearTimeout (timeID);
+   status = 0;
+}
+
+//===> displays image depending on the play mode in forward direction
+function animate_fwd()
+{
+    current_image++;
+   if(current_image > last_image)
+   {
+      if (play_mode == 0)
+      {
+         current_image = last_image;
+         status=0;
+         return;
+      };                           //NORMAL
+      if (play_mode == 1)
+      {
+         current_image = first_image; //LOOP
+      };
+      if (play_mode == 2)
+      {
+         current_image = last_image;
+         animate_rev();
+         return;
+      };
+   };
+   document.animation.src = theImages[current_image].src;
+   document.control_form.frame_nr.value = current_image;
+   timeID = setTimeout("animate_fwd()", delay);
+}
+
+//===> displays image depending on the play mode in reverse direction
+function animate_rev()
+{
+    current_image--;
+   if(current_image < first_image)
+   {
+      if (play_mode == 0)
+      {
+         current_image = first_image;
+         status=0;
+         return;
+      };                           //NORMAL
+      if (play_mode == 1)
+      {
+         current_image = last_image; //LOOP
+      };
+      if (play_mode == 2)
+      {
+         current_image = first_image;
+         animate_fwd();
+         return;
+      };
+   };
+   document.animation.src = theImages[current_image].src;
+   document.control_form.frame_nr.value = current_image;
+   timeID = setTimeout("animate_rev()", delay);
+}
+
+//===> changes playing speed by adding to or substracting from the delay between frames
+function change_speed(dv)
+{
+
+   delay+=dv;
+   if(delay > delay_max) delay = delay_max;
+   if(delay < delay_min) delay = delay_min;
+}
+
+//===> "play forward"
+function fwd()
+{
+       stop();
+   status = 1;
+   animate_fwd();
+}
+
+//===> jumps to a given image number
+function go2image(number)
+{
+    stop();
+   if (number > last_image) number = last_image;
+   if (number < first_image) number = first_image;
+   current_image = number;
+   document.animation.src = theImages[current_image].src;
+   document.control_form.frame_nr.value = current_image;
+}
+
+//===> "play reverse"
+function rev()
+{
+    stop();
+   status = 1;
+   animate_rev();
+}
+
+//===> changes play mode (normal, loop, swing)
+function change_mode(mode)
+{
+   play_mode = mode;
+}
+
+//===> sets everything once the whole page and the images are loaded (onLoad handler in <body>)
+function launch()
+{
+
+   stop();
+   current_image = first_image;
+   document.animation.src = theImages[current_image].src;
+   document.control_form.frame_nr.value = current_image;
+   // this is trying to set the text (Value property) on the START and END buttons
+   // to S(first_image number), E(last_image number). It's supposed (according to
+   // JavaScrtipt Authoring Guide) to be a read only value but for some reason
+   // it works on win3.11 (on IRIX it doesn't).
+   document.control_form.start_but.value = " Primeira(" + first_image + ") ";
+   document.control_form.end_but.value = " Ultima(" + last_image + ") ";
+   // this needs to be done to set the right mode when the page is manualy reloaded
+   change_mode (0);
+}
+
+//===> writes the interface into the code where you want it
+function animation()
+{
+   document.write("<div class=\"opcoes-previsao\">");
+   document.write(" <FORM Method=POST Name=\"control_form\"> ");
+
+   
+   document.write("    <INPUT TYPE=\"button\" Value=\" Animar \" onClick=\"fwd()\"> ");
+   document.write("    <INPUT TYPE=\"button\" Value=\" Parar \" onClick=\"stop()\"> ");
+   document.write(" &nbsp &nbsp ");
+   document.write("    <INPUT TYPE=\"button\" Value=\" -1 \" onClick=\"go2image(--current_image)\"> ");
+   document.write("    <INPUT TYPE=\"button\" Value=\" +1 \" onClick=\"go2image(++current_image)\"> ");
+
+   document.write(" &nbsp &nbsp ");
+   document.write("     <B>Previsão </B><INPUT TYPE=\"text\" NAME=\"frame_nr\" VALUE=\"0\" SIZE=\"4\" ");
+   document.write("     onFocus=\"this.select()\" onChange=\"go2image(this.value)\"> ");
+   document.write("    &nbsp;<INPUT TYPE=\"button\" Value=\" - - \" onClick=\"change_speed(delay_step)\"> <B>Velocidade</B> ");
+   document.write("    <INPUT TYPE=\"button\" Value=\" ++ \" onClick=\"change_speed(-delay_step)\"> ");
+   document.write(" </FORM> ");
+   document.write(" </div> ");
+   document.write("<br><div id=\"previsao\"><IMG NAME=\"animation\" SRC=\"http://www.rederemo.org/html//produtos/hycom/LMA/errotsm/10_dias/d_0\" ALT=\"[Imagem não encontrada]\">");
+   document.write(" </div> ");
+};
+</script>
+		
+    <script language="javascript">
+		animation();
+	</script> &nbsp;
+	
+	
+	<div style="text-align: center; margin-bottom: 20px; margin-top: -20px">Data de referência: 18/09/2016</div>
+	<div style="display: block;" id="notification_1" class="notification warning closeable">
+		<p><span>Alert!</span> The products showed in this page are results of ocean models still under scientific development. They are subject to numerical errors and parameterization errors and other approximations of the governing primitive equations. The use of the products is only for scientific purposes today. REMO does not assume any responsibility for inadequate use of these products.</p>
+		<a class="close" href="10.html#"></a><a href="10.html#" class="close"></a>
+	</div>
+	
+<script>
+	$('#nav li').removeClass('selected');
+	$('#nav #menu-produtos').addClass('selected');
+
+	launch();
+</script>
+		
+		
+		<!-- Page Title / End -->
+	</div>
+</div>
+
+
+<!-- 960 Container -->
+<!-- 960 Container / End -->
+
+</div>
+<!-- Wrapper / End -->
+
+
+<!-- Footer
+================================================== -->
+
+<!-- Footer Start -->
+<div id="footer">
+	<!-- 960 Container -->
+	<div class="container">
+	
+		<!-- Footer / Bottom -->
+		<div class="sixteen columns">
+			<div id="footer-bottom">
+				&copy; 2013 Rede Remo | <a href="../../arquivo.html">Acesso ao sistema</a>								<div id="scroll-top-top"><img src="../../../images/cc.png" /></div>
+			</div>
+		</div>
+
+	</div>
+	<!-- 960 Container / End -->
+
+</div>
+<!-- Footer / End -->
+
+</body>
+</html>

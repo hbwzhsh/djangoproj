@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>REMO - Rede de Modelagem e Observação Oceanográfica.</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<link rel="shortcut icon" href="http://www.rederemo.org/html//favicon.ico" type="image/x-icon" />
+
+
+<!-- CSS
+================================================== -->
+
+<link rel="stylesheet" type="text/css" href="../../../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../../../css/boxed.css" id="layout" />
+<link rel="stylesheet" type="text/css" href="../../../css/green.css" id="colors" />
+
+<link rel="stylesheet" type="text/css" href="../../../css/rederemo.css" />
+
+
+<link rel="stylesheet" type="text/css" href="../../../css/smoothness/jquery-ui-1.10.2.custom.css" />
+
+<link rel="stylesheet" type="text/css" media="screen" href="../../../css/elfinder.min.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../../css/theme.css" />
+
+<!-- Java Script
+================================================== -->
+
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/jquery-ui.min.js"></script>
+
+<script src="../../../js/custom.js"></script>
+<script src="../../../js/selectnav.js"></script>
+<script src="../../../js/flexslider.js"></script>
+<script src="../../../js/tooltip.js"></script>
+<script src="../../../js/fancybox.js"></script>
+<script src="../../../js/carousel.js"></script>
+<script src="../../../js/isotope.js"></script>
+
+<script src="../../../js/elfinder.min.js"></script>
+<script type="text/javascript" src="../../../js/i18n/elfinder.pt_BR.js"></script>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18697687-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+
+</script>
+
+<script>
+
+	 $(document).ready(function() {
+
+		 	$.ajaxSetup({ cache: false });
+			
+			$("tr").mouseover(function(){
+			    $(this).addClass("over")
+			});
+			
+			$("tr").mouseout(function(){
+			    $(this).removeClass("over")
+			});
+	 });
+</script>			
+
+
+</head>
+
+<body>
+
+
+<!-- Wrapper Start -->
+<div id="wrapper">
+
+
+<!-- Header
+================================================== -->
+
+<!-- 960 Container -->
+<div class="container ie-dropdown-fix">
+
+	<!-- Header -->
+	<div id="header_en">
+
+		<!-- Logo -->
+		<div class="eight columns">
+			<div id="logo">
+				<div class="clear"></div>
+			</div>
+		</div>
+
+	</div>
+	<!-- Header / End -->
+	
+			
+	<!-- Navigation -->
+	<div class="sixteen columns">
+
+		<div id="navigation">
+			<ul id="nav">
+				<li id="menu-home"><a href="../../welcome/lang/english.html">Home</a></li>
+				<li id="menu-equipe"><a href="../../integrante.html">Team</a></li>
+				<li id="menu-publicacoes"><a href="../../producao.html">Publications</a></li>
+				<li id="menu-noticias"><a href="../../noticias.html">News</a></li>
+				<li id="menu-documentos"><a href="../../arquivo.html">Documents</a></li>
+				<li id="menu-produtos" class="selected">
+					<a href="1.html#">Products</a>
+					<ul style="display: none;">
+						<li><a href="../observacional.html">Dados Observacionais</a></li>
+						<li><a href="../operacional.html">Operational Forecast Number Ocean</a></li>
+						<li><a href="../tsm.html">Sea Surface Temperature</a></li>
+						<li><a href="http://146.164.14.45:8080/las">LAS</a></li>
+					</ul>
+				</li>
+				<li id="menu-contato"><a href="../../welcome/contato.html">Contacts</a></li>
+				
+			</ul>
+			
+
+		</div>
+		
+		<!-- Search Form -->
+		<div class="search-form">
+			<a href="../../welcome/lang/portuguese.html"><img alt="" src="../../../images/bra.gif" /></a>
+			<a href="../../welcome/lang/english.html"><img alt="" src="../../../images/usa.gif" /></a>
+			
+			<!-- 
+			<form method="get" action="#">
+				<input class="search-text-box" type="text">
+			</form>
+			 -->
+		</div> 
+		
+		<div class="clear"></div>
+		
+	</div>
+	<!-- Navigation / End -->
+
+</div>
+<!-- 960 Container / End -->
+
+
+<!-- Content
+================================================== -->
+
+<!-- 960 Container -->
+<div class="container">
+	<div class="sixteen columns">
+		
+		<div id="page-title">
+	<h2>Products <span>/ Boia Meteo-Oceanográfia (BMOBR-06)</span></h2>
+	<div id="bolded-line"></div>
+</div>
+
+<form id="meuform" name="meuform" method="post" action="http://www.rederemo.org/html/index.php/produto/visualizar/1">
+
+<div class="opcoes-previsao">
+
+	<div id="btn">
+		<input id="01" name="dados1" selected="selected" value="Status" type="button" onclick="fig('http://okesat.com.br/cf2/fig/loc.png');"/>
+		<input id="02" name="dados2" value="Intensidade e Direcao do Vento" type="button" onclick="fig('figs/ws.png');"/>
+		<input id="03" name="dados3" value="Temperatura do Ar & Agua" type="button" onclick="fig('figs/sbe.png')"/>
+		<input id="04" name="dados4" value="Umidade Relativa" type="button" onclick="umidrel()"/>
+		<input id="05" name="dados5" value="Pressao Atmosferica" type="button" onclick="fig('figs/bp.png')"/>
+		<input id="06" name="dados6" value="Ondas" type="button" onclick="fig('figs/onda.png')"/>
+		<input id="07" name="dados7" value="Correntes" type="button" onclick="fig('figs/adcp.png')"/>
+	</div>
+	
+	</div>
+
+	<div align="center">
+		<img id ="img" src = "http://okesat.com.br/cf2/fig/loc.png" />
+		<!-- <img id ="img" src='../../../img/nao_disponivel.jpg'/>	 -->
+	</div>
+	
+	<div style="display: block;" id="notification_1" class="notification warning closeable">
+		<p><span>Alert!</span> The products showed in this page are results of ocean models still under scientific development. They are subject to numerical errors and parameterization errors and other approximations of the governing primitive equations. The use of the products is only for scientific purposes today. REMO does not assume any responsibility for inadequate use of these products.</p>
+		<a class="close" href="1.html#"></a><a href="1.html#" class="close"></a>
+	</div>
+
+</form>
+
+
+<!-- graficos png -->
+<script>
+    function fig(pathname)
+    {
+        var x = document.getElementById("img").src = pathname;
+        // document.getElementById().innerHTML("img") = x
+    }
+</script>
+
+
+<script type="text/javascript">
+$(function umidrel() {
+
+    $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
+        // Create the chart
+        $('#img').highcharts('StockChart', {
+
+
+            rangeSelector: {
+                selected: 1
+            },
+
+            title: {
+                text: 'Umidade Relativa'
+            },
+
+            series: [{
+                name: 'Umid. Rel',
+                data: data,
+                tooltip: {
+                    valueDecimals: 2
+                }
+            }]
+        });
+    });
+
+});
+</script>
+
+
+
+</div>
+
+		
+<!-- Page Title / End -->
+</div>
+
+
+<!-- 960 Container -->
+<!-- 960 Container / End -->
+
+</div>
+<!-- Wrapper / End -->
+
+
+<!-- Footer
+================================================== -->
+
+<!-- Footer Start -->
+<div id="footer">
+	<!-- 960 Container -->
+	<div class="container">
+	
+		<!-- Footer / Bottom -->
+		<div class="sixteen columns">
+			<div id="footer-bottom">
+				&copy; 2013 Rede Remo | <a href="../../arquivo.html">Acesso ao sistema</a>								
+				<div id="scroll-top-top"><img src="../../../images/cc.png" /></div>
+			</div>
+		</div>
+
+	</div>
+	<!-- 960 Container / End -->
+
+</div>
+<!-- Footer / End -->
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+#wrapper{
+	
+	padding: 20px 35px 35px;
+}
+
+
+#footer-obs{
+	
+	text-align: right;
+	margin-top: -40px;
+}
+
+
+.subGrupoLattes{	
+	color: #C0C0C0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.subsubGrupoLattes{
+	color: #C0C0C0;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.opcoes-previsao {
+    background: none repeat scroll 0 0 #EFEFEF;
+    padding: 20px;
+    text-align: center;
+}
+
+#previsao{
+	text-align: center;
+	min-height: 500px;
+}
+
+
+.flex-active-slide a{
+	
+	color: white;
+}
+
+
+.flex-active-slide h3 a, .flex-active-slide h3 a:visited, .flex-active-slide h3 a:hover, .flex-active-slide p a, .flex-active-slide p a:visited, .flex-active-slide h3 p:hover{
+	
+	color: white;
+}
+
+
+#noticia-conteudo{
+	
+	text-align: justify;	
+}
+
+.noticia-fonte{
+	color: #888888;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+.noticias-outras{
+	margin-top: 30px;
+}
+
+
+.pagina-editar{
+	text-align: right;
+	margin-top: -50px;
+	margin-bottom: 25px;	
+}
+
+.pagina-editar-home{
+	/*
+	text-align: right;
+	margin-top: -50px;
+	margin-bottom: 25px;
+	*/	
+}
+
+
+
+form label{
+	display: block;
+	margin-bottom: 3px;	
+	font-weight: bold;
+	color: #444;
+}
+
+.menu-acoes{
+	margin-top: -30px;
+	margin-bottom: 0.6em;
+	text-align: right;
+}
+
+.elfinder-workzone{
+	font-size: 12pt;
+}
+
+.importar-cvlattes{
+	text-align: right;	
+}
+
+.pdf-anexado{
+	
+}
+
+.pdf-nao-anexo{
+	
+}
+
+.link-pdf {
+    background: url("../img/iconPDF.gif") no-repeat scroll 0 0 transparent;
+    padding-left: 20px;
+}
+
+.link-importar {
+    background: url("../images/icone_lattes.jpg") no-repeat scroll 0 0 transparent;
+    padding-left: 20px;
+}
+
+
+
+.msg-sucesso {
+	background:#dcfbdc url('../images/msg-ok.gif') no-repeat 7px;
+	border-top: 2px solid #93c493;
+	border-bottom: 2px solid #93c493;
+	padding: 10px;
+	padding-left: 40px;	
+	text-align: left;
+}
+
+.msg-validacao{
+	 
+	background:#FFEAEA url('../images/msg-erro.gif') no-repeat 7px center;
+	border-top: 2px solid #f0a5a5;
+	border-bottom: 2px solid #f0a5a5;
+	padding: 10px;
+	padding-left: 40px;
+	text-align: left;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.msg-aviso{
+	 
+	background:#dbe8fb  url("../images/information.png") no-repeat 10px;
+	border-top: 2px solid #8ba6d0;
+	border-bottom: 2px solid #8ba6d0;
+	padding: 10px;
+	padding-left: 40px;
+	text-align: left;
+}
+
+

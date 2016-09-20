@@ -1,0 +1,33 @@
+/* =================================================================== */
+/* Green #5084a9
+====================================================================== */
+
+#navigation ul li a:hover, 
+#navigation ul li:hover > a, 
+#bolded-line, 
+.button.gray:hover, 
+.button.light:hover, 
+.button.color, 
+
+
+.flex-direction-nav .flex-prev:hover, 
+.flex-direction-nav .flex-next:hover, 
+#scroll-top-top a, 
+.post-icon {
+	background-color:#5084a9;
+}
+
+.mr-rotato-prev:hover, 
+.mr-rotato-next:hover,
+li.current, 
+.tags a:hover {
+	background-color: #5084a9;
+	border-color: #5084a9;
+}
+
+#filters a:hover, 
+.selected, 
+#portfolio-navi a:hover {
+	background-color: #5084a9 !important;
+	border: 1px solid #5084a9 !important;
+}
